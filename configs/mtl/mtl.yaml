@@ -1,0 +1,41 @@
+OUTPUT_DIR: './test/mtl'
+TAG: 'default'
+SEED: 2021
+NUM_FOLDS: 10
+HYPER: True
+#HYPER: False #ZLJ
+HYPER_REMOVE: None
+NUM_ITERS: 30
+
+
+DATA:
+  DATASET: 'mtl'
+  DATA_PATH: './data/mtl/'
+  TASK_TYPE: 'regression'
+  METRIC: 'R2'
+  SPLIT_TYPE: 'random'
+  
+
+MODEL:
+  F_ATT: False
+  BRICS: False
+  
+  
+  
+
+LOSS:
+  FL_LOSS: False
+  CL_LOSS: False
+  
+
+
+TRAIN:
+  EARLY_STOP: 50
+  MAX_EPOCHS: 800
+  OPTIMIZER:
+    TYPE: 'adam'
+  LR_SCHEDULER:
+    TYPE: 'reduce'
+
+
+
